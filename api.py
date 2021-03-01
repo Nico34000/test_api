@@ -40,11 +40,11 @@ def by_country(country):
     app.logger.warning(f"Acces a la route: latest_by_country/")
     if country in country_list():
         app.logger.debug(f"route demande: latest_by_country/ {country}")
-        return jsonify(latest_by_country(country))
+        return (latest_by_country(country))
         app.logger.debug(f"Operation reussi: {country}")
     elif country.lower() == country:
         app.logger.debug(f"route demande: latest_by_country/ {country}")
-        return jsonify(latest_by_country(country.capitalize()))
+        return (latest_by_country(country.capitalize()))
         app.logger.debug(f"Operation reussi: {country}")
     else:
         app.logger.error(f"la route demande n'existe pas: {country}")
