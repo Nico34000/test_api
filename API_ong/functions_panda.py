@@ -35,9 +35,9 @@ def latest_by_country(country):
     df = df.loc[df['Country'].isin([country])].sort_values(['year'],
                                                            ascending=False)
     result = {}
-    result["country"] = str(df.iloc[0][1])
-    result["year"] = int(df.iloc[0][2])
-    result["emissions"] = float(df.iloc[0][4])
+    result["country"] = str(df.iloc[3][1])
+    result["year"] = int(df.iloc[2][2])
+    result["emissions"] = float(df.iloc[0][1])
     return result
 
 
